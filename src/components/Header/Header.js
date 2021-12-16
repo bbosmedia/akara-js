@@ -2,12 +2,15 @@ import React from 'react'
 import './Header.css'
 
 const Header = () => {
+    const bodyAddClasss = () =>{
+        document.querySelector('body').classList.toggle('modal-active');
+    }
     return (
         <div id='header' className='sticky-top'>
             <nav className='navbar navbar-expand-lg navbar-light ya-nav'>
                 <div className="container-fluid">
                     <a href="/" aria-current="page" title="Yaponamama" className="navbar-brand nuxt-link-exact-active nuxt-link-active">
-                    <img height="45" alt="Yaponamama" loading="lazy" src="https://yaponamama.uz/_nuxt/img/logo.b78e1a8.svg" className="d-inline-block align-top lazyLoad isLoaded" />
+                    <img height="45" alt="Yaponamama" loading="lazy" src="./images/logo.svg" className="d-inline-block align-top lazyLoad isLoaded" />
                     </a>
                     <div className="collapse navbar-collapse">
                         <div className="navbar-nav ya-navbar align-items-center mr-auto"><a href="/" aria-current="page" className="nav-item nav-link ya-city-link nuxt-link-exact-active nuxt-link-active" role="button">Ташкент
@@ -27,7 +30,7 @@ const Header = () => {
                         <a href="#" className="nav-item nav-link ya-cart-icon border-left-0 pt-0 pb-0">
                             <img loading="lazy" height="25" src="images/ic_cart.01c3be9.svg" className="d-inline-block align-middle lazyLoad isLoaded" /> 
                         </a>
-                        <a href="/" aria-current="page" className="nav-item nav-link border-left-0 pt-0 pb-0 pl-4 nuxt-link-exact-active nuxt-link-active" role="button"><img loading="lazy" height="20" src="images/menu_bar.svg" className="d-inline-block align-middle lazyLoad isLoaded" /></a>
+                        <a  onClick={bodyAddClasss} aria-current="page" className="nav-item nav-link border-left-0 pt-0 pb-0 pl-4 nuxt-link-exact-active nuxt-link-active" role="button"><img loading="lazy" height="20" src="images/menu_bar.svg" className="d-inline-block align-middle lazyLoad isLoaded" /></a>
                         </div>
                     </div>
                 </div>
