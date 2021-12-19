@@ -6,10 +6,12 @@ import MobileMenu from './MobileMenu';
 
 const Header = () => {
     return (
+    <>
         <div id='header' className='sticky-top'>
             <MobileMenu />
             <ComputerMenu />
         </div>
+    </>
     )
 }
 

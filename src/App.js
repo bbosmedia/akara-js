@@ -14,22 +14,29 @@ import DeliveryPage from './pages/DeliveryPage/DeliveryPage';
 import RulesPage from './pages/RulesPage/RulesPage';
 import ActionsPage from './pages/ActionsPage/ActionsPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
+import SiterRu from './SiterRu';
 
 function App() {
+  const changeLanguage = () =>{
+    document.querySelector("html").setAttribute("lang", "en");
+  }
   return (
     <Router>
       <div className="App">
           <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/gallery" element={<GallerPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/delivery" element={<DeliveryPage />} />
-          <Route path="/offer" element={<OfferPage />} />
-          <Route path="/rules" element={<RulesPage />} />
-          <Route path="/actions" element={<ActionsPage />} />
-          <Route path="/contacts" element={<ContactsPage />} />
-        </Routes>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/gallery" element={<GallerPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/delivery" element={<DeliveryPage />} />
+              <Route path="/offer" element={<OfferPage />} />
+              <Route path="/rules" element={<RulesPage />} />
+              <Route path="/actions" element={<ActionsPage />} />
+              <Route path="/contacts" element={<ContactsPage />} />
+            </Routes>
+        <Footer />
+
+        <Header />
         <Footer />
       </div>
     </Router>
